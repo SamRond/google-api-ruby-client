@@ -181,7 +181,7 @@ module Google
         # @raise [Google::Apis::AuthorizationError] Authorization is required
         def process_response(status, header, body)
           check_status(status, header, body)
-          decode_response_body(header['Content-Type'].first, body)
+          body
         end
 
         # Check the response and raise error if needed
